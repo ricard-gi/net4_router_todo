@@ -14,24 +14,37 @@ const TaskCreate = () => {
     };
 
     return (
-        <div>
-            <h1>Nova Tasca</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Títol:
+        <div className="container mt-5">
+            <h1 className="text-center text-primary mb-4">Nova Tasca</h1>
+
+            <form onSubmit={handleSubmit} className="w-50 mx-auto">
+                <div className="form-group mb-3">
+                    <label htmlFor="title" className="form-label">Títol:</label>
                     <input
                         type="text"
+                        id="title"
+                        className="form-control"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
                     />
-                </label>
-                <button type="submit">Crear</button>
+                </div>
+
+                <div className="text-center">
+                    <button type="submit" className="btn btn-success">
+                        Crear
+                    </button>
+                    <button 
+                        type="button" 
+                        className="btn btn-secondary ms-2"
+                        onClick={() => navigate('/')}
+                    >
+                        Cancel·lar
+                    </button>
+                </div>
             </form>
         </div>
     );
 };
-
-
 
 export default TaskCreate;

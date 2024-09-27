@@ -16,14 +16,27 @@ const TaskDelete = () => {
     };
 
     return (
-        <div>
-            <h1>Confirmar Esborrat</h1>
-            <p>Estàs segur que vols esborrar la tasca amb ID {id}?</p>
-            <button onClick={handleDelete}>Confirmar</button>
-            <button onClick={() => navigate('/')}>Cancel·lar</button>
+        <div className="container mt-5">
+            <h1 className="text-center text-danger mb-4">Confirmar Esborrat</h1>
+            
+            <p className="text-center">Estàs segur que vols esborrar la tasca amb ID <strong>{id}</strong>?</p>
+            
+            <div className="text-center">
+                <button 
+                    onClick={handleDelete} 
+                    className="btn btn-danger mx-2"
+                >
+                    Confirmar
+                </button>
+                <button 
+                    onClick={() => navigate('/')} 
+                    className="btn btn-secondary mx-2"
+                >
+                    Cancel·lar
+                </button>
+            </div>
         </div>
     );
 };
-
 
 export default TaskDelete;
