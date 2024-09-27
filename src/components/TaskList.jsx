@@ -37,10 +37,7 @@ const TaskList = () => {
                     ))}
                 </tbody>
             </table>
-
-
-
-        </div>
+s        </div>
     );
 };
 

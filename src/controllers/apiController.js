@@ -50,7 +50,6 @@ export const getTaskById = (id) => {
         }
     }
 
-
     return fetch(`${API_URL}/${id}`, options)
         .then((response) => response.json())
         .catch((error) => {
@@ -70,6 +69,7 @@ export const updateTask = (id, task) => {
         },
         body: JSON.stringify({...task, Id: id}),
     }
+    
     return fetch(API_URL, options)
         .then((response) => response.json())
         .catch((error) => {
