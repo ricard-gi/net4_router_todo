@@ -8,7 +8,9 @@ import TaskDelete from './components/TaskDelete';
 const App = () => {
   return (
     <div>
-      <h1>Mis tareas</h1>
+      <h2 className="text-center">
+       Tasques
+      </h2>
       <hr />
 
       <Routes>
